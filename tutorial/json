@@ -1,0 +1,65 @@
+{
+  "swaggerVersion":"1.2",
+  "apis":
+    [
+      {
+        "operations":
+          [
+            {
+            "parameters":
+              [
+                {
+                  "name":"name",
+                  "paramType":"form",
+                  "required":true,
+                  "type":"string",
+                  "description":""
+                }
+              ],
+            "nickname":"Group_create",
+            "notes":"API endpoint that allows groups to be viewed or edited.",
+            "summary":"API endpoint that allows groups to be viewed or edited",
+            "type":"GroupSerializer",
+            "method":"POST"
+            },
+            {
+            "parameters":
+            [
+              {
+              "dataType":"integer",
+              "paramType":"query",
+              "name":"page",
+              "description":null
+              }
+              ],
+              "nickname":"Group_list",
+              "notes":"API endpoint that allows groups to be viewed or edited.",
+              "summary":"API endpoint that allows groups to be viewed or edited",
+              "type":"GroupSerializer",
+              "method":"GET"
+              }
+              ],
+              "path":"/groups/",
+              "description":"API endpoint that allows groups to be viewed or edited"
+              },
+              {
+              "operations":
+              [
+              {
+              "parameters":
+              [
+              {
+              "paramType":"path",
+              "required":true,
+              "type":"string",
+              "name":"pk"
+              },
+              {
+              "name":"name",
+              "paramType":"form",
+              "required":true,
+              "type":"string",
+              "description":""
+              }
+              ],
+              "nickname":"Group_update","notes":"API endpoint that allows groups to be viewed or edited.","summary":"API endpoint that allows groups to be viewed or edited","type":"GroupSerializer","method":"PUT"},{"parameters":[{"paramType":"path","required":true,"type":"string","name":"pk"}],"nickname":"Group_retrieve","notes":"API endpoint that allows groups to be viewed or edited.","summary":"API endpoint that allows groups to be viewed or edited","type":"GroupSerializer","method":"GET"},{"parameters":[{"paramType":"path","required":true,"type":"string","name":"pk"},{"name":"name","paramType":"form","required":false,"type":"string","description":""}],"nickname":"Group_partial_update","notes":"API endpoint that allows groups to be viewed or edited.","summary":"API endpoint that allows groups to be viewed or edited","type":"GroupSerializer","method":"PATCH"},{"parameters":[{"paramType":"path","required":true,"type":"string","name":"pk"}],"nickname":"Group_destroy","notes":"API endpoint that allows groups to be viewed or edited.","summary":"API endpoint that allows groups to be viewed or edited","type":"GroupSerializer","method":"DELETE"}],"path":"/groups/{pk}/","description":"API endpoint that allows groups to be viewed or edited"}],"models":{"WriteGroupSerializer":{"required":["name"],"id":"WriteGroupSerializer","properties":{"name":{"description":null,"required":true,"readOnly":false,"type":"string"}}},"GroupSerializer":{"required":["url","name"],"id":"GroupSerializer","properties":{"url":{"description":null,"required":false,"readOnly":true,"type":"string"},"name":{"description":null,"required":true,"readOnly":false,"type":"string"}}}},"basePath":"http://127.0.0.1:8000","resourcePath":"/groups","apiVersion":""}
